@@ -1,9 +1,13 @@
-<div>
-    <ol class="list-group">
-        {{#each posts as |post|}}
-        <li class="list-group-item">
-            {{> post-info post }}
-        </li>
-        {{/each}}
-    </ol>
+<div id="content-wrapper" class="container-fluid d-flex p-2 justify-content-center flex-column">
+  <h1 class="text-center">Blog Posts</h1>
+
+  <ul id="post-section" class="container d-flex p-1 justify-content-center flex-column list-unstyled">
+    {{#each posts as |post|}}
+    <!--single card start here-->
+    <li class="border border-light rounded p-3 mb-3">
+      {{> post-details post }}
+    </li>
+    {{/each}}
+  </ul>
+
 </div>
